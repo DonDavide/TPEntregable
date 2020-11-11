@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de productos</title>
+</head>
+<body><% for(var i=0; i < products.length; i++){ %>
+    <ul>
+        <li>NOMBRE:  <%=products[i].name%>
+            <li>MARCA:  <%=products[i].marca%></li>
+            <li>PRECIO:  <%=products[i].price%>  $</li>
+            <li><a href="/detail/<%=products[i].id%> ">DETALLE DEL PRODUCTO</a></li>
+        </li>
+    
+    </ul><br><% } %>
+    <h2><a href="/create/<%=nuevoId%>">AGREGAR PRODUCTO</a></h2>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=productFound.name%></title>
+</head>
+<body>
+    <ul>
+        <li>NOMBRE:  <%=productFound.name%>
+            <li>ID:  <%=productFound.id%></li>
+            <li>PRECIO:  <%=productFound.price%>  $</li>
+            <li>DESCRIPCION:  <%=productFound.description%></li>
+            <li>MARCA:  <%=productFound.marca%></li>
+            <li>STOCK:  <%=productFound.stock%> UD</li><br><br>
+            <li><a href="/edit/<%=productFound.id%> ">EDITAR PRODUCTO</a></li><br><br>
+            <li><a href="/delete/<%=productFound.id%>">BORRAR PRODUCTO</a></li>
+        </li>
+    
+</body>
+</html>
