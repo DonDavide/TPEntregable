@@ -23,9 +23,14 @@ const controller = {
 	},
 	//CARGA DE PRODUCTO
     create: (req, res) => {
-		var ultimoId = (products[products.length -1].id);
-		var nuevoId= parseInt(ultimoId) + 1;
-		console.log(nuevoId);
+		var allIds=[]; 
+		for (i = 0 ; i < products.length; i ++){
+			if(products[i].id){
+				allIds.push(parseInt(products[i].id)); //Inserto todos los IDS del objeto products en un array.
+			}
+		}
+		var idMax = Math.max(...allIds)//busco el numero mas alto dentro de los ids
+		var nuevoId= idMax + 1; //creo el nuevo Id agregandole +1 al de mayor valor
 		res.render("create",{nuevoId});
     },
     
